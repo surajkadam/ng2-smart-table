@@ -8,6 +8,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'ss',
   },
 ];
