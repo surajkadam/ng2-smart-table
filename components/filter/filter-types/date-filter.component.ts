@@ -8,7 +8,7 @@ import { DefaultFilter } from './default-filter';
   template: `
     <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" [selectMode]="datepickerSelectMode"
            [(ngModel)]="inputModel" [placeholder]="datepickerPlaceholder" readonly />
-    <button (click)="resetFilter()">x</button>
+    <button (click)="resetFilter()" class="calendarReset"></button>
     <owl-date-time #dt [pickerType]="datepickerType" (afterPickerClosed)="onChange()"></owl-date-time>
   `,
 })
