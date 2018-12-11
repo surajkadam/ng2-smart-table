@@ -31,7 +31,10 @@ export class TbodyCreateCancelComponent implements OnChanges {
   onCancelEdit(event: any) {
     event.preventDefault();
     event.stopPropagation();
-
+	this.row.cells.forEach(obj => {
+       obj['newValue']=obj['value'];
+     }
+    );
     this.row.isInEditing = false;
   }
 
