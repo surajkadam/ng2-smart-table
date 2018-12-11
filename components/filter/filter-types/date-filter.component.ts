@@ -6,10 +6,11 @@ import { DefaultFilter } from './default-filter';
   selector: 'date-filter',
   styles: ['input { width: 80% !important; }'],
   template: `
-    <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" [selectMode]="datepickerSelectMode"
-           [(ngModel)]="inputModel" [placeholder]="datepickerPlaceholder" readonly />
-    <div class="calendar_icon_121212_test"></div>
-	<button (click)="resetFilter()" class="calendarReset"></button>
+	<div class="calendar_icon">
+		<input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" [selectMode]="datepickerSelectMode"
+			   [(ngModel)]="inputModel" [placeholder]="datepickerPlaceholder" readonly />
+		<button (click)="resetFilter()" class="calendarReset"></button>
+	</div>
     <owl-date-time #dt [pickerType]="datepickerType" (afterPickerClosed)="onChange()"></owl-date-time>
   `,
 })
