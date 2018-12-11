@@ -4,7 +4,7 @@ import { DefaultFilter } from './default-filter';
 
 @Component({
   selector: 'date-filter',
-  styles: ['input { width: 80% !important; }'],
+  styles: ['input { width: 100% !important; }'],
   template: `
 	<div class="calendar_icon">
 		<input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" [selectMode]="datepickerSelectMode"
