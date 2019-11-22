@@ -76,7 +76,7 @@ export class DateFilterComponent extends DefaultFilter implements OnInit {
     }
     const config = this.column.getFilterConfig().datepicker;
     if (config.selectMode == 'range') {
-      this.query = `'${this.dateToUTCDateString(this.inputModel[0])} 00:00:00' and ${this.column.id} <= '${this.dateToUTCDateString(this.inputModel[1])} 23:59:59'`;
+      this.query = `'${this.dateToUTCDateString(this.inputModel[0])} 00:00:00' $AND ${this.column.id} $LTE '${this.dateToUTCDateString(this.inputModel[1])} 23:59:59'`;
     } else {
       this.query = this.dateToUTCDateString(this.inputModel);
     }
